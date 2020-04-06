@@ -81,6 +81,19 @@ paths:
           type: string
         name: departmentId
         in: path
+  /department:
+    put:
+      summary: ''
+      operationId: put-department
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: ''
+      operationId: delete-department
+      responses:
+        '200':
+          description: OK
 components:
   schemas:
     Department:

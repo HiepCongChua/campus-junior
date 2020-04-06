@@ -6,7 +6,7 @@ info:
 servers:
   - url: 'http://dev-api.campusjunior.com'
 paths:
-  '/schools/{schoolId}':
+  /schools:
     get:
       summary: GET
       tags: []
@@ -58,11 +58,7 @@ paths:
             type: number
           in: query
           name: page
-    parameters:
-      - schema:
-          type: string
-        name: schoolId
-        in: path
+    parameters: []
     post:
       summary: POST
       operationId: post-school
@@ -130,7 +126,19 @@ paths:
              "message":"Success"
             }
       description: Delete school
-      
+  /schools/:
+    put:
+      summary: ''
+      operationId: put-schools
+      responses:
+        '200':
+          description: OK
+    delete:
+      summary: ''
+      operationId: delete-schools
+      responses:
+        '200':
+          description: OK
 components:
   schemas:
     School:
