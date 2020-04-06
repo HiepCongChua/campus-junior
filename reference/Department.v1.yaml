@@ -84,7 +84,7 @@ paths:
       description: delete a department
     parameters:
       - schema:
-          type: string
+          type: integer
         name: departmentId
         in: path
         required: true

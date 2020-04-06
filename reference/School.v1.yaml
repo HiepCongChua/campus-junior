@@ -89,56 +89,50 @@ paths:
                 - amount
                 - studyLevel
                 - idDepartment
+  '/schools/{schoolId}':
     put:
       summary: PUT
-      operationId: put-schools-schoolId
+      operationId: put-schools
       responses:
         '200':
           description: |-
             {
-             "status":200,
-             "message":"Success"
+             status:200,
+             message:"Success"
             }
-      description: |
-        Update info school
       requestBody:
         content:
           application/json:
             schema:
               type: object
               properties:
-                PUT:
+                name:
                   type: string
+                amount:
+                  type: integer
                 studyLevel:
                   type: integer
                 idDepartment:
                   type: integer
-                amount:
-                  type: integer
+        description: ''
+      description: Update a school
     delete:
       summary: DELETE
-      operationId: delete-schools-schoolId
+      operationId: delete-schools
       responses:
         '200':
           description: |-
             {
-             "status":200,
-             "message":"Success"
+             status:200,
+             message:"Success"
             }
-      description: Delete school
-  /schools/:
-    put:
-      summary: ''
-      operationId: put-schools
-      responses:
-        '200':
-          description: OK
-    delete:
-      summary: ''
-      operationId: delete-schools
-      responses:
-        '200':
-          description: OK
+      description: Delete a school
+    parameters:
+      - schema:
+          type: integer
+        name: schoolId
+        in: path
+        required: true
 components:
   schemas:
     School:

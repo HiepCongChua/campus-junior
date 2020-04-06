@@ -184,7 +184,7 @@ paths:
         Delete a class
     parameters:
       - schema:
-          type: string
+          type: integer
         name: classId
         in: path
         required: true
